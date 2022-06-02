@@ -39,6 +39,7 @@ public class PositiveTest {
 		// click login button
 		
 		WebElement logInButton = driver.findElement(By.tagName("button"));
+		logInButton.click();
 
 		// verification
 		// new url
@@ -49,7 +50,7 @@ public class PositiveTest {
 		
 		// logout button is visible
 		WebElement logOutButton = driver.findElement(By.xpath("//<a[@class='button secondary radius']"));
-		
+		Assert.assertTrue(logOutButton.isDisplayed(), "Logout button is not visible");
 		// succesful login message
 		
 		
